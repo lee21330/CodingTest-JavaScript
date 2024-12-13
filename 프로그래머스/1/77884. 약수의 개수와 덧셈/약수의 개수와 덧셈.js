@@ -8,9 +8,9 @@ function solution(left, right) {
             }
         }
         if(count%2 === 0){
-            answer = answer+i;
+            answer += i;
         }else{
-            answer = answer-i;
+            answer -= i;
         }
         count = 0;
     }
