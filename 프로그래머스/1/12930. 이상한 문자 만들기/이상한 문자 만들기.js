@@ -1,11 +1,10 @@
 function solution(s) {
-    // "_"로 공백 구분
-    var arr = s.replace(/ /g,'_').split('');
+    var arr = s.split('');
     var index = 0;
     
     for(let i = 0; i < arr.length; i++){
         // 새로운 단어일때 index를 0으로 초기화
-        if (arr[i] == '_'){
+        if (arr[i] == ' '){
             index = 0;
         }else{
             // 단어의 짝수번째 알파벳은 대문자로
@@ -20,5 +19,5 @@ function solution(s) {
         
     }
 
-    return arr.join('').replace(/_/g,' ');
+    return arr.join('');
 }
