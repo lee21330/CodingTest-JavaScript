@@ -1,6 +1,6 @@
 function solution(n, lost, reserve) {
     // 도난당한 학생 중 여벌 체육복이 있는 학생 제거
-    var lost_student = lost.filter((i) => !reserve.includes(i)).sort((a,b)=>a-b);
+    var lost_student = lost.filter((i) => !reserve.includes(i));
     var reserve_student = reserve.filter((i) => !lost.includes(i)); 
 
     // 체육 수업을 들릴 수 있는 학생 수 = 전체 학생 수 - 체육복을 빌리지 못한 학생 수 
