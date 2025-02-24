@@ -11,14 +11,11 @@ function solution(X, Y) {
         // Y에서 숫자 i 횟수 구하기
         const countY = array_y.filter(num => Number(num) === i).length;
         // X와 Y에서 공통으로 등장하는 숫자의 최소 개수를 answer에 더하기
-        answer+=String(i).repeat(Math.min(countX, countY));
+        answer += String(i).repeat(Math.min(countX, countY));
     }
     
     // 공통된 숫자가 없는 경우
-    if(answer === '') return "-1"
-    
-    // answer가 0만 포함하는 경우
-    if(Number(answer) === 0) return "0"
+    if(answer === '') return "-1";
 
-    return answer;
+    return Number(answer) === 0?"0":answer;
 }
